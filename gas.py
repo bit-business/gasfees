@@ -1,6 +1,7 @@
 import asyncio
 import requests
 import telegram
+import os
 
 async def send_telegram_message(bot_token, chat_id, message):
     bot = telegram.Bot(token=bot_token)
