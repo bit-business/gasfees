@@ -1,5 +1,6 @@
 import requests
 import telegram
+import os
 
 def send_telegram_message(bot_token, chat_id, message):
     bot = telegram.Bot(token=bot_token)
@@ -11,8 +12,8 @@ def check_gas_price():
     return data['gas_prices']['slow']
 
 def main():
-    bot_token = 'your-telegram-bot-token'
-    chat_id = 'your-chat-id'
+    bot_token = os.environ['TELEGRAM_BOT_TOKEN']
+    chat_id = os.environ['TELEGRAM_CHAT_ID']
     threshold = 40000
 
     slow_gas_price = check_gas_price()
