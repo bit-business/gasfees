@@ -2,7 +2,7 @@ name: Gas Price Alert
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Runs every 5 minutes
+    - cron: '*/20 * * * *'  # Runs every 5 minutes
 
 jobs:
   check_gas_price:
