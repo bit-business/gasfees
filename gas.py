@@ -15,7 +15,7 @@ def check_gas_price():
 async def main():
     bot_token = os.environ['TELEGRAM_BOT_TOKEN']
     chat_id = os.environ['TELEGRAM_CHAT_ID']
-    threshold = 99000
+    threshold = 90000
 
     slow_gas_price = check_gas_price()
     if slow_gas_price < threshold:
